@@ -1,0 +1,13 @@
+<div class="row">
+    <h1 class="col s6 offset-s3">Result</h1>
+    <div class="col s6 offset-s3">
+        {{#each formData}}
+            <ul class="collection">
+                <li class="collection-item">Username: <strong>{{username}}</strong></li>
+                <li class="collection-item">Password: <strong>{{password}}</strong></li>
+                <li class="collection-item">Gender: <strong>{{gender}}</strong></li>
+                <li class="collection-item">Agree: <strong>{{agree}}</strong></li>
+            </ul>
+        {{/each}}
+    </div>
+</div>

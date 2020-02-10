@@ -1,0 +1,33 @@
+<form class="row" method="post" action="/create">
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <input type="text" name="todo" id="todo" class="validate" required>
+            <label for="todo">Todo</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add</button>
+        </div>
+    </div>
+</form>
+
+<div class="row todos">
+    <div class="col s6 offset-s3">
+        <ul class="collection">
+            {{#each todos}}
+                <li class="collection-item">
+                    <div>
+                        {{this}}
+                        <a href="/delete/{{@index}}" class="secondary-content delete-todo">
+                            <i class="material-icons">delete</i>
+                        </a>
+                        <a href="/edit/{{@index}}" class="secondary-content">
+                            <i class="material-icons">edit</i>
+                        </a>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
